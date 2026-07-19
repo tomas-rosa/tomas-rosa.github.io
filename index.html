@@ -679,12 +679,12 @@
 </main>
 
 <script>
-  const toggle = document.getElementById('langToggle');
+ const toggle = document.getElementById('langToggle');
   const langBlocks = document.querySelectorAll('.lang-block');
   const langLabels = document.querySelectorAll('.lang-label');
   const htmlEl = document.documentElement;
   const titleEl = document.querySelector('title');
-
+ 
   function setLanguage(lang){
     langBlocks.forEach(function(block){
       block.classList.toggle('hidden', block.dataset.lang !== lang);
@@ -696,11 +696,11 @@
     document.querySelector('.print-btn').textContent = lang === 'pt' ? 'Imprimir / Guardar como PDF' : 'Print / Save as PDF';
     titleEl.textContent = lang === 'pt' ? 'Tomás Rosa - Currículo' : 'Tomás Rosa - Resume';
   }
-
+ 
   toggle.addEventListener('change', function(){
     setLanguage(this.checked ? 'en' : 'pt');
   });
-
+ 
   document.querySelectorAll('.lang-label').forEach(function(label){
     label.addEventListener('click', function(){
       const lang = this.dataset.lang;
@@ -708,7 +708,7 @@
       setLanguage(lang);
     });
   });
-
+ 
   setLanguage('en');
 </script>
 
